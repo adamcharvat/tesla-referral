@@ -1,6 +1,6 @@
 # Referral landing page · 1 000 km na Superchargerech
 
-Statická stránka pro doporučující odkaz `https://ts.la/adam506840` v pěti jazycích (CZ, SK, HU, EN, DE).
+Statická stránka pro doporučující odkaz `https://ts.la/adam506840` v pěti jazycích na https://free1000km.com: angličtina na rootu (`x-default`), ostatní jazyky v `/cs/`, `/sk/`, `/hu/`, `/de/`.
 Obsahuje jen HTML, CSS a vanilla JS. Nemá build step, balíčky ani runtime závislosti, z externích zdrojů načítá jen Google Fonts.
 
 ```
@@ -19,11 +19,12 @@ Před nasazením nastav `base_url` v `src/site.json` (nebo `--base-url`). Použ�
 | `src/i18n/{cs,sk,hu,en,de}.json` | veškerý viditelný text; všechny soubory musí mít stejnou strukturu |
 | `src/site.json` | sdílená konfigurace: odkaz, `reward_km`, datum aktualizace, jazyky, base URL |
 | `generate.py` | generátor (jen standardní knihovna) a kontroly |
-| `index.html`, `sk/`, `hu/`, `en/`, `de/` | **generovaný výstup, needitovat ručně** |
+| `index.html` (EN, x-default), `cs/`, `sk/`, `hu/`, `de/` | **generovaný výstup, needitovat ručně** |
 | `assets/site.css`, `assets/site.js` | společné styly a skripty |
 | `assets/img/` | ořezy fotografií (WebP + JPEG), `og-image.jpg`, `CREDITS.md` |
 | `tools/prepare_images.py` | volitelný jednorázový pipeline ořezů (Pillow + cwebp) |
 | `sitemap.xml`, `robots.txt` | generuje `generate.py` |
+| `CNAME`, `.nojekyll` | GitHub Pages: vlastní doména, vypnutý Jekyll |
 
 ## Placeholdery
 
@@ -44,6 +45,8 @@ Generátor sestavení zastaví, když:
 - `reward` neodpovídá `reward_km`,
 - se ve výstupu objeví hodnota 500,
 - chybí referencovaný asset.
+
+Na `x-default` stránce generátor vloží data pro lištu „stránka je dostupná také v…“. `site.js` ji ukáže podle jazyka prohlížeče, nikdy automaticky nepřesměruje a volbu si pamatuje v `localStorage.lang-choice`.
 
 Automaticky dělá i typografii: v CZ/SK vkládá nezlomitelnou mezeru za jednopísmenné předložky a spojky. Za spojovník uvnitř slova (`Supercharger-hálózaton`, `Tesla-Konto`) vkládá word joiner, takže se tam řádek nikdy nezlomí. Slova se nikdy nedělí (`hyphens: none`).
 

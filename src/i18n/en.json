@@ -93,5 +93,9 @@
   "updated_human": "17 October 2026",
   "footer_disclaimer": "A private page run by the owner of this referral link. It is not operated, sponsored or endorsed by Tesla, Inc. Tesla and Supercharger are trademarks of Tesla, Inc. The referral programme may change; the terms shown on the Tesla website on the day of your order apply.",
   "footer_lang_label": "Languages",
-  "photos_label": "Photography"
+  "photos_label": "Photography",
+
+  "lang_suggest_text": "This page is also available in English.",
+  "lang_suggest_action": "Switch to English",
+  "lang_suggest_dismiss": "Close"
 }

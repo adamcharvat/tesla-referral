@@ -3,46 +3,46 @@
   <url>
     <loc>https://free1000km.com/</loc>
     <lastmod>2026-10-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="sk" href="https://free1000km.com/sk/"/>
     <xhtml:link rel="alternate" hreflang="hu" href="https://free1000km.com/hu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://free1000km.com/de/"/>
+  </url>
+  <url>
+    <loc>https://free1000km.com/cs/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/cs/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://free1000km.com/sk/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://free1000km.com/hu/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://free1000km.com/de/"/>
   </url>
   <url>
     <loc>https://free1000km.com/sk/</loc>
     <lastmod>2026-10-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="sk" href="https://free1000km.com/sk/"/>
     <xhtml:link rel="alternate" hreflang="hu" href="https://free1000km.com/hu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://free1000km.com/de/"/>
   </url>
   <url>
     <loc>https://free1000km.com/hu/</loc>
     <lastmod>2026-10-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="sk" href="https://free1000km.com/sk/"/>
     <xhtml:link rel="alternate" hreflang="hu" href="https://free1000km.com/hu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://free1000km.com/de/"/>
-  </url>
-  <url>
-    <loc>https://free1000km.com/en/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/"/>
-    <xhtml:link rel="alternate" hreflang="sk" href="https://free1000km.com/sk/"/>
-    <xhtml:link rel="alternate" hreflang="hu" href="https://free1000km.com/hu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://free1000km.com/de/"/>
   </url>
   <url>
     <loc>https://free1000km.com/de/</loc>
     <lastmod>2026-10-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://free1000km.com/cs/"/>
     <xhtml:link rel="alternate" hreflang="sk" href="https://free1000km.com/sk/"/>
     <xhtml:link rel="alternate" hreflang="hu" href="https://free1000km.com/hu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://free1000km.com/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://free1000km.com/de/"/>
   </url>
 </urlset>

@@ -4,7 +4,7 @@
   "referral_display": "ts.la/adam506840",
   "reward_km": 1000,
   "updated": "2026-10-17",
-  "default_language": "cs",
+  "default_language": "en",
   "x_default_language": "en",
   "theme_color": {
     "light": "#f3f1ec",
@@ -12,10 +12,35 @@
   },
   "photo_credits": "Zion C, Autotrader UK, Remedy / Unsplash",
   "languages": [
-    { "code": "cs", "path": "", "label": "Čeština", "locale": "cs_CZ" },
-    { "code": "sk", "path": "sk/", "label": "Slovenčina", "locale": "sk_SK" },
-    { "code": "hu", "path": "hu/", "label": "Magyar", "locale": "hu_HU" },
-    { "code": "en", "path": "en/", "label": "English", "locale": "en_GB" },
-    { "code": "de", "path": "de/", "label": "Deutsch", "locale": "de_DE" }
+    {
+      "code": "en",
+      "path": "",
+      "label": "English",
+      "locale": "en_GB"
+    },
+    {
+      "code": "cs",
+      "path": "cs/",
+      "label": "Čeština",
+      "locale": "cs_CZ"
+    },
+    {
+      "code": "sk",
+      "path": "sk/",
+      "label": "Slovenčina",
+      "locale": "sk_SK"
+    },
+    {
+      "code": "hu",
+      "path": "hu/",
+      "label": "Magyar",
+      "locale": "hu_HU"
+    },
+    {
+      "code": "de",
+      "path": "de/",
+      "label": "Deutsch",
+      "locale": "de_DE"
+    }
   ]
 }

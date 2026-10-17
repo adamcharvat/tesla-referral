@@ -93,5 +93,9 @@
   "updated_human": "2026. október 17.",
   "footer_disclaimer": "Az ajánlói link tulajdonosának magánoldala. Nem a Tesla, Inc. üzemelteti, nem támogatja és nem hagyta jóvá. A Tesla és a Supercharger a Tesla, Inc. védjegyei. Az ajánlói program változhat; a Tesla weboldalán a rendelés napján feltüntetett feltételek az irányadók.",
   "footer_lang_label": "Nyelvi változatok",
-  "photos_label": "Fotók"
+  "photos_label": "Fotók",
+
+  "lang_suggest_text": "Ez az oldal magyarul is elérhető.",
+  "lang_suggest_action": "Váltás magyarra",
+  "lang_suggest_dismiss": "Bezárás"
 }

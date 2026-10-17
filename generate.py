@@ -111,7 +111,7 @@ def relative_href(from_path: str, to_path: str) -> str:
     return ("../" * depth + to_path) or "./"
 
 
-def build_context(site: dict, lang_cfg: dict, strings: dict, base_url: str) -> dict:
+def build_context(site: dict, lang_cfg: dict, strings: dict, base_url: str, all_strings: dict) -> dict:
     code = lang_cfg["code"]
     path = lang_cfg["path"]
     reward = strings["reward"]
@@ -134,6 +134,26 @@ def build_context(site: dict, lang_cfg: dict, strings: dict, base_url: str) -> d
             for item in strings["faq_items"]
         ],
     }
+
+    # Data for the "also available in …" bar, rendered on the x-default page only.
+    # Each entry is written in its own language; site.js picks one from the
+    # visitor's browser languages and never redirects automatically.
+    lang_suggest = []
+    if code == site["x_default_language"]:
+        offers = {
+            item["code"]: {
+                "href": relative_href(path, item["path"]),
+                "text": all_strings[item["code"]]["lang_suggest_text"],
+                "action": all_strings[item["code"]]["lang_suggest_action"],
+                "dismiss": all_strings[item["code"]]["lang_suggest_dismiss"],
+                "label": all_strings[item["code"]]["footer_lang_label"],
+            }
+            for item in languages
+            if item["code"] != code
+        }
+        # "} }" keeps the template placeholder check from tripping on nested JSON.
+        payload = json.dumps(offers, ensure_ascii=False).replace("</", "<\\/").replace("}}", "} }")
+        lang_suggest = [{"json": payload}]
 
     visible = join_hyphens(strings)
     context = dict(visible)
@@ -164,6 +184,7 @@ def build_context(site: dict, lang_cfg: dict, strings: dict, base_url: str) -> d
         steps=[dict(step, number=f"{index:02d}") for index, step in enumerate(visible["steps"], 1)],
         terms=[dict(term, detail_html=wrap_reward(term["detail"], reward)) for term in visible["terms"]],
         faq_jsonld=json.dumps(faq_jsonld, ensure_ascii=False, indent=2).replace("</", "<\\/"),
+        lang_suggest=lang_suggest,
     )
     return context
 
@@ -242,14 +263,18 @@ def main() -> int:
             missing = set(raw[site["default_language"]]) ^ set(strings)
             raise BuildError(f"[{code}] translation structure differs from {site['default_language']}.json {sorted(missing) or ''}")
 
+    resolved = {}
     for lang_cfg in site["languages"]:
         code = lang_cfg["code"]
-        strings = raw[code]
-        tokens = {"reward": strings["reward"], "referral_display": site["referral_display"]}
-        strings = resolve_tokens({k: v for k, v in strings.items() if k != "reward"}, tokens, code)
+        tokens = {"reward": raw[code]["reward"], "referral_display": site["referral_display"]}
+        strings = resolve_tokens({k: v for k, v in raw[code].items() if k != "reward"}, tokens, code)
         strings["reward"] = tokens["reward"]
+        resolved[code] = strings
 
-        context = build_context(site, lang_cfg, strings, base_url)
+    for lang_cfg in site["languages"]:
+        code = lang_cfg["code"]
+        strings = resolved[code]
+        context = build_context(site, lang_cfg, strings, base_url, resolved)
         page = render(template, context)
         out_dir = ROOT / lang_cfg["path"]
         verify(page, code, site, strings, out_dir, context["asset_base"])

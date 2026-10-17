@@ -2,7 +2,7 @@
    Progressive enhancement only. Without this file the page still works:
    links, FAQ, language selector and the readonly referral field are native.
    Here: theme toggle and persistence, copy to clipboard, language menu
-   closing, sticky header hairline, scroll reveal. */
+   closing, language suggestion bar, sticky header hairline, scroll reveal. */
 (() => {
   "use strict";
 
@@ -159,6 +159,78 @@
       if (menu.open && !menu.contains(event.target)) menu.open = false;
     });
   });
+
+  /* ------------------------------------------------- language suggestion */
+  // On the x-default page only (the generator embeds #lang-suggest there).
+  // Suggests the version in the visitor's browser language; never redirects.
+  const LANG_KEY = "lang-choice";
+  const readChoice = () => {
+    try { return window.localStorage.getItem(LANG_KEY); } catch (error) { return null; }
+  };
+  const storeChoice = (code) => {
+    try { window.localStorage.setItem(LANG_KEY, code); } catch (error) { /* storage blocked */ }
+  };
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest(".lang__option, .site-footer__langs a, .lang-suggest__action");
+    if (link && link.hreflang) storeChoice(link.hreflang);
+  });
+
+  const suggestSource = document.getElementById("lang-suggest");
+  if (suggestSource) {
+    let offers = null;
+    try { offers = JSON.parse(suggestSource.textContent); } catch (error) { offers = null; }
+    const current = root.lang;
+    const choice = readChoice();
+    let target = null;
+    if (offers && choice !== current) {
+      if (choice && offers[choice]) {
+        target = choice;
+      } else {
+        const preferred = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+        for (const tag of preferred) {
+          const code = String(tag).toLowerCase().split("-")[0];
+          if (code === current) break;
+          if (offers[code]) { target = code; break; }
+        }
+      }
+    }
+
+    if (target) {
+      const offer = offers[target];
+      const bar = document.createElement("div");
+      bar.className = "lang-suggest";
+      bar.lang = target;
+      bar.setAttribute("role", "region");
+      bar.setAttribute("aria-label", offer.label);
+
+      const inner = document.createElement("div");
+      inner.className = "lang-suggest__inner";
+      const text = document.createElement("p");
+      text.className = "lang-suggest__text";
+      text.textContent = offer.text;
+      const action = document.createElement("a");
+      action.className = "lang-suggest__action";
+      action.href = offer.href;
+      action.hreflang = target;
+      action.textContent = offer.action;
+      const close = document.createElement("button");
+      close.type = "button";
+      close.className = "lang-suggest__close";
+      close.setAttribute("aria-label", offer.dismiss);
+
+      close.addEventListener("click", () => {
+        storeChoice(current);
+        bar.classList.remove("is-visible");
+        window.setTimeout(() => bar.remove(), reduceMotion.matches ? 0 : 320);
+      });
+
+      inner.append(text, action, close);
+      bar.append(inner);
+      document.body.append(bar);
+      window.requestAnimationFrame(() => window.requestAnimationFrame(() => bar.classList.add("is-visible")));
+    }
+  }
 
   /* ------------------------------------------------- header hairline on scroll */
   const header = document.querySelector("[data-header]");

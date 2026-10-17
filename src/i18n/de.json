@@ -93,5 +93,9 @@
   "updated_human": "17. Oktober 2026",
   "footer_disclaimer": "Eine private Seite des Inhabers dieses Empfehlungslinks. Sie wird weder von Tesla, Inc. betrieben noch gesponsert oder empfohlen. Tesla und Supercharger sind Marken der Tesla, Inc. Das Empfehlungsprogramm kann sich ändern; maßgeblich sind die am Bestelltag auf der Tesla-Website angegebenen Bedingungen.",
   "footer_lang_label": "Sprachversionen",
-  "photos_label": "Fotos"
+  "photos_label": "Fotos",
+
+  "lang_suggest_text": "Diese Seite gibt es auch auf Deutsch.",
+  "lang_suggest_action": "Auf Deutsch wechseln",
+  "lang_suggest_dismiss": "Schließen"
 }

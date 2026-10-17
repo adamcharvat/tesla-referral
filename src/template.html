@@ -64,6 +64,10 @@
 <link rel="stylesheet" href="{{asset_base}}assets/site.css">
 <script src="{{asset_base}}assets/site.js" defer></script>
 <script type="application/ld+json">{{{faq_jsonld}}}</script>
+<!--# Language suggestion data (x-default page only). site.js shows a small bar in the
+      visitor's browser language with a link to that version; it never redirects. -->
+{{#lang_suggest}}<script type="application/json" id="lang-suggest">{{{json}}}</script>
+{{/lang_suggest}}
 </head>
 <body>
 <a class="skip-link" href="#main">{{skip_link}}</a>

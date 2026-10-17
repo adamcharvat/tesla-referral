@@ -1134,7 +1134,86 @@ button, input { font: inherit; color: inherit; }
 }
 
 /* --------------------------------------------------------------------------
-   14. Motion: scroll reveal, theme change
+   14. Language suggestion bar (x-default page, injected by site.js)
+   Fixed to the bottom edge so it never shifts the layout.
+   -------------------------------------------------------------------------- */
+.lang-suggest {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  border-top: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  transform: translateY(100%);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.lang-suggest.is-visible { transform: none; }
+
+.lang-suggest__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-5);
+  max-width: calc(var(--max) + 2 * var(--margin));
+  margin-inline: auto;
+  padding: var(--space-3) calc(var(--margin) + 2.75rem) max(var(--space-3), env(safe-area-inset-bottom)) var(--margin);
+  position: relative;
+}
+
+.lang-suggest__text { color: var(--color-ink-2); }
+
+.lang-suggest__action {
+  font-family: var(--font-display);
+  font-stretch: 104%;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
+}
+.lang-suggest__action::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 0.3em;
+}
+
+.lang-suggest__close {
+  position: absolute;
+  top: 50%;
+  right: calc(var(--margin) - 0.75rem);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-ink-2);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.lang-suggest__close::before,
+.lang-suggest__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.875rem;
+  height: 1.5px;
+  background: currentColor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.lang-suggest__close::after { transform: translate(-50%, -50%) rotate(-45deg); }
+
+@media (hover: hover) {
+  .lang-suggest__close:hover { background: var(--color-hover); color: var(--color-ink); }
+  .lang-suggest__action:hover { text-decoration-color: var(--color-accent); }
+}
+
+/* --------------------------------------------------------------------------
+   15. Motion: scroll reveal, theme change
    -------------------------------------------------------------------------- */
 .js [data-reveal] {
   transition:
@@ -1181,6 +1260,7 @@ button, input { font: inherit; color: inherit; }
 }
 
 @media print {
+  .lang-suggest,
   .site-header,
   .copy,
   .final__media { display: none; }

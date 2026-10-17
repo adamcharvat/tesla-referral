@@ -93,5 +93,9 @@
   "updated_human": "17. októbra 2026",
   "footer_disclaimer": "Súkromná stránka majiteľa odporúčacieho odkazu. Neprevádzkuje ju, nesponzoruje ani neschválila spoločnosť Tesla, Inc. Tesla a Supercharger sú ochranné známky spoločnosti Tesla, Inc. Program odporúčaní sa môže meniť; rozhodujúce sú podmienky uvedené na webe Tesla v deň objednávky.",
   "footer_lang_label": "Jazykové verzie",
-  "photos_label": "Fotografie"
+  "photos_label": "Fotografie",
+
+  "lang_suggest_text": "Táto stránka je dostupná aj v slovenčine.",
+  "lang_suggest_action": "Prepnúť do slovenčiny",
+  "lang_suggest_dismiss": "Zavrieť"
 }
