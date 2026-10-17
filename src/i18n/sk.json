@@ -1,0 +1,97 @@
+{
+  "reward": "1 000 km",
+  "title": "{reward} nabíjania na Superchargeroch zadarmo – osobné odporúčanie",
+  "meta_description": "Objednajte si nové vozidlo Tesla cez odporúčací odkaz a po prevzatí získate {reward} nabíjania na Superchargeroch zadarmo. Postup, podmienky a časté otázky.",
+  "skip_link": "Preskočiť na obsah",
+  "brand_label": "Osobné odporúčanie",
+  "nav_label": "Hlavná navigácia",
+  "nav_how": "Ako to funguje",
+  "nav_terms": "Podmienky",
+  "nav_faq": "Otázky",
+  "nav_cta": "Objednať",
+  "lang_button_label": "Zmeniť jazyk, aktuálne slovenčina",
+  "theme_label": "Tmavý režim",
+
+  "hero_eyebrow": "Odmena pri objednávke novej Tesly",
+  "h1": "{reward} nabíjania na Superchargeroch zadarmo",
+  "hero_lead": "Objednajte si nové vozidlo Tesla cez tento odkaz. Kilometre sa vám pripíšu po prevzatí vozidla.",
+  "cta_text": "Objednať a získať {reward}",
+  "hero_note": "Odkaz vedie na oficiálny web Tesla.",
+
+  "copy_label": "Alebo si odkaz skopírujte na neskôr",
+  "copy_input_label": "Odporúčací odkaz",
+  "copy_button": "Kopírovať",
+  "copy_done": "Skopírované",
+  "copy_status": "Odkaz je v schránke.",
+  "copy_manual": "Odkaz je označený – skopírujte ho klávesmi Ctrl+C alebo ⌘C.",
+
+  "how_eyebrow": "Postup",
+  "how_title": "Ako to funguje",
+  "how_intro": "Odmenu získate len pri objednávke, ktorá vznikne cez tento odkaz. Inak sa nič nemení.",
+  "steps": [
+    {
+      "title": "Otvorte odkaz",
+      "text": "Odkaz vás presmeruje na web Tesla a odporúčanie sa k vašej objednávke priradí automaticky."
+    },
+    {
+      "title": "Nakonfigurujte a objednajte",
+      "text": "Vyberte si model a výbavu a objednávku dokončite ako zvyčajne. Za použitie odkazu nič neplatíte."
+    },
+    {
+      "title": "Prevezmite vozidlo",
+      "text": "Po prevzatí vozidla sa vám do účtu Tesla pripíše {reward} nabíjania na Superchargeroch zadarmo."
+    }
+  ],
+
+  "terms_eyebrow": "Podmienky",
+  "terms_title": "Podmienky v skratke",
+  "terms_intro": "Stručné zhrnutie. Záväzné sú podmienky programu odporúčaní, ktoré Tesla uvádza pri objednávke.",
+  "terms": [
+    { "term": "Vaša odmena", "detail": "{reward} nabíjania na Superchargeroch zadarmo" },
+    { "term": "Kto ju získa", "detail": "Ten, kto si objedná nové vozidlo Tesla cez tento odporúčací odkaz." },
+    { "term": "Kedy sa pripíše", "detail": "Po prevzatí vozidla, do vášho účtu Tesla." },
+    { "term": "Odmena majiteľa odkazu", "detail": "Rovnaká: aj on získa {reward} nabíjania na Superchargeroch zadarmo." },
+    { "term": "Cena", "detail": "Použitie odkazu je zadarmo a cenu vozidla nezvyšuje." },
+    { "term": "Rozhodujúce pravidlá", "detail": "Aktuálne podmienky programu odporúčaní Tesla platné v deň objednávky." }
+  ],
+
+  "faq_eyebrow": "Otázky",
+  "faq_title": "Časté otázky",
+  "faq_intro": "Odpovede na to, na čo sa ľudia pred objednávkou pýtajú najčastejšie.",
+  "faq_items": [
+    {
+      "question": "Čo presne získam?",
+      "answer": "{reward} nabíjania na Superchargeroch zadarmo. Kilometre sa pripíšu do vášho účtu Tesla po prevzatí vozidla."
+    },
+    {
+      "question": "Musím pre odmenu urobiť niečo navyše?",
+      "answer": "Nie. Stačí objednať cez tento odkaz. Odporúčanie sa k objednávke priradí automaticky."
+    },
+    {
+      "question": "Čo z toho má majiteľ odkazu?",
+      "answer": "Majiteľ odkazu získa rovnakú odmenu ako vy: {reward} nabíjania na Superchargeroch zadarmo. Odmena je pre obe strany rovnaká a táto stránka to neskrýva."
+    },
+    {
+      "question": "Stojí použitie odkazu niečo?",
+      "answer": "Nie. Za použitie odkazu nič neplatíte a cena vozidla sa tým nezvyšuje."
+    },
+    {
+      "question": "Môžem odkaz použiť až po odoslaní objednávky?",
+      "answer": "Odkaz použite ešte pred odoslaním objednávky. O prípadnom dodatočnom priradení rozhoduje iba Tesla."
+    },
+    {
+      "question": "Kto túto stránku prevádzkuje?",
+      "answer": "Súkromná osoba, ktorej patrí tento odporúčací odkaz. Stránku neprevádzkuje, nesponzoruje ani neschválila spoločnosť Tesla, Inc."
+    }
+  ],
+
+  "final_eyebrow": "Posledný krok",
+  "final_title": "Odmena platí len pri objednávke cez tento odkaz",
+  "final_text": "Otvorte odkaz ešte pred konfiguráciou vozidla. {reward} nabíjania na Superchargeroch zadarmo sa vám pripíše po prevzatí.",
+
+  "footer_updated_label": "Naposledy aktualizované",
+  "updated_human": "17. októbra 2026",
+  "footer_disclaimer": "Súkromná stránka majiteľa odporúčacieho odkazu. Neprevádzkuje ju, nesponzoruje ani neschválila spoločnosť Tesla, Inc. Tesla a Supercharger sú ochranné známky spoločnosti Tesla, Inc. Program odporúčaní sa môže meniť; rozhodujúce sú podmienky uvedené na webe Tesla v deň objednávky.",
+  "footer_lang_label": "Jazykové verzie",
+  "photos_label": "Fotografie"
+}

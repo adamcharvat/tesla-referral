@@ -1,0 +1,97 @@
+{
+  "reward": "1,000 km",
+  "title": "{reward} of free Supercharging – a personal referral",
+  "meta_description": "Order a new Tesla through this referral link and receive {reward} of free Supercharging after delivery. How it works, the terms and common questions.",
+  "skip_link": "Skip to content",
+  "brand_label": "Personal referral",
+  "nav_label": "Main navigation",
+  "nav_how": "How it works",
+  "nav_terms": "Terms",
+  "nav_faq": "Questions",
+  "nav_cta": "Order",
+  "lang_button_label": "Change language, currently English",
+  "theme_label": "Dark mode",
+
+  "hero_eyebrow": "A reward when you order a new Tesla",
+  "h1": "{reward} of free Supercharging",
+  "hero_lead": "Order your new Tesla through this link. The kilometres are added to your Tesla account once you take delivery.",
+  "cta_text": "Order and get {reward}",
+  "hero_note": "The link leads to the official Tesla website.",
+
+  "copy_label": "Or copy the link for later",
+  "copy_input_label": "Referral link",
+  "copy_button": "Copy",
+  "copy_done": "Copied",
+  "copy_status": "Link copied to the clipboard.",
+  "copy_manual": "The link is selected – copy it with Ctrl+C or ⌘C.",
+
+  "how_eyebrow": "Process",
+  "how_title": "How it works",
+  "how_intro": "The reward applies only to an order placed through this link. Nothing else changes.",
+  "steps": [
+    {
+      "title": "Open the link",
+      "text": "It takes you to the Tesla website, and the referral is attached to your order automatically."
+    },
+    {
+      "title": "Configure and order",
+      "text": "Choose your model and options and complete the order as usual. Using the link costs you nothing."
+    },
+    {
+      "title": "Take delivery",
+      "text": "Once you take delivery, {reward} of free Supercharging is added to your Tesla account."
+    }
+  ],
+
+  "terms_eyebrow": "Terms",
+  "terms_title": "The terms at a glance",
+  "terms_intro": "A short summary. The binding terms are those of the Tesla referral programme shown when you order.",
+  "terms": [
+    { "term": "Your reward", "detail": "{reward} of free Supercharging" },
+    { "term": "Who receives it", "detail": "Anyone who orders a new Tesla through this referral link." },
+    { "term": "When it is added", "detail": "After delivery, to your Tesla account." },
+    { "term": "The link owner’s reward", "detail": "The same: {reward} of free Supercharging as well." },
+    { "term": "Cost", "detail": "Using the link is free and does not increase the price of the car." },
+    { "term": "Governing rules", "detail": "The Tesla referral programme terms in effect on the day you order." }
+  ],
+
+  "faq_eyebrow": "Questions",
+  "faq_title": "Common questions",
+  "faq_intro": "Answers to what people most often ask before they order.",
+  "faq_items": [
+    {
+      "question": "What exactly do I get?",
+      "answer": "{reward} of free Supercharging, added to your Tesla account after you take delivery."
+    },
+    {
+      "question": "Do I need to do anything else to get the reward?",
+      "answer": "No. Simply order through this link. The referral is attached to your order automatically."
+    },
+    {
+      "question": "What does the link owner get?",
+      "answer": "The link owner receives the same reward as you: {reward} of free Supercharging. The reward is the same for both sides, and this page does not hide it."
+    },
+    {
+      "question": "Does using the link cost anything?",
+      "answer": "No. Using the link costs you nothing and does not increase the price of the car."
+    },
+    {
+      "question": "Can I use the link after placing my order?",
+      "answer": "Use the link before you submit your order. Whether a referral can be added afterwards is solely Tesla’s decision."
+    },
+    {
+      "question": "Who runs this page?",
+      "answer": "A private individual who owns this referral link. The page is not operated, sponsored or endorsed by Tesla, Inc."
+    }
+  ],
+
+  "final_eyebrow": "Final step",
+  "final_title": "The reward applies only to orders placed through this link",
+  "final_text": "Open the link before you configure your car. {reward} of free Supercharging is added after delivery.",
+
+  "footer_updated_label": "Last updated",
+  "updated_human": "17 October 2026",
+  "footer_disclaimer": "A private page run by the owner of this referral link. It is not operated, sponsored or endorsed by Tesla, Inc. Tesla and Supercharger are trademarks of Tesla, Inc. The referral programme may change; the terms shown on the Tesla website on the day of your order apply.",
+  "footer_lang_label": "Languages",
+  "photos_label": "Photography"
+}

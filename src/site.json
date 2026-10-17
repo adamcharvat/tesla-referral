@@ -1,0 +1,21 @@
+{
+  "base_url": "https://free1000km.com/",
+  "referral_url": "https://ts.la/adam506840",
+  "referral_display": "ts.la/adam506840",
+  "reward_km": 1000,
+  "updated": "2026-10-17",
+  "default_language": "cs",
+  "x_default_language": "en",
+  "theme_color": {
+    "light": "#f3f1ec",
+    "dark": "#111214"
+  },
+  "photo_credits": "Zion C, Autotrader UK, Remedy / Unsplash",
+  "languages": [
+    { "code": "cs", "path": "", "label": "Čeština", "locale": "cs_CZ" },
+    { "code": "sk", "path": "sk/", "label": "Slovenčina", "locale": "sk_SK" },
+    { "code": "hu", "path": "hu/", "label": "Magyar", "locale": "hu_HU" },
+    { "code": "en", "path": "en/", "label": "English", "locale": "en_GB" },
+    { "code": "de", "path": "de/", "label": "Deutsch", "locale": "de_DE" }
+  ]
+}

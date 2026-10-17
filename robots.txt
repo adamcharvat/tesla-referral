@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://adamcharvat.github.io/tesla-referral/sitemap.xml
+
+Sitemap: https://free1000km.com/sitemap.xml

@@ -1,0 +1,97 @@
+{
+  "reward": "1.000 km",
+  "title": "{reward} kostenloses Laden an Superchargern – persönliche Empfehlung",
+  "meta_description": "Bestellen Sie einen neuen Tesla über diesen Empfehlungslink und erhalten Sie nach der Auslieferung {reward} kostenloses Supercharging. Ablauf, Bedingungen, FAQ.",
+  "skip_link": "Zum Inhalt springen",
+  "brand_label": "Persönliche Empfehlung",
+  "nav_label": "Hauptnavigation",
+  "nav_how": "So funktioniert’s",
+  "nav_terms": "Bedingungen",
+  "nav_faq": "Fragen",
+  "nav_cta": "Bestellen",
+  "lang_button_label": "Sprache wechseln, aktuell Deutsch",
+  "theme_label": "Dunkler Modus",
+
+  "hero_eyebrow": "Eine Prämie bei der Bestellung eines neuen Tesla",
+  "h1": "{reward} kostenloses Laden an Superchargern",
+  "hero_lead": "Bestellen Sie Ihren neuen Tesla über diesen Link. Die Kilometer werden Ihrem Tesla-Konto nach der Auslieferung gutgeschrieben.",
+  "cta_text": "Bestellen und {reward} sichern",
+  "hero_note": "Der Link führt zur offiziellen Tesla-Website.",
+
+  "copy_label": "Oder kopieren Sie den Link für später",
+  "copy_input_label": "Empfehlungslink",
+  "copy_button": "Kopieren",
+  "copy_done": "Kopiert",
+  "copy_status": "Link in die Zwischenablage kopiert.",
+  "copy_manual": "Der Link ist markiert – kopieren Sie ihn mit Strg+C oder ⌘C.",
+
+  "how_eyebrow": "Ablauf",
+  "how_title": "So funktioniert’s",
+  "how_intro": "Die Prämie gilt nur für eine Bestellung, die über diesen Link entsteht. Sonst ändert sich nichts.",
+  "steps": [
+    {
+      "title": "Link öffnen",
+      "text": "Er führt Sie zur Tesla-Website, und die Empfehlung wird Ihrer Bestellung automatisch zugeordnet."
+    },
+    {
+      "title": "Konfigurieren und bestellen",
+      "text": "Wählen Sie Modell und Ausstattung und schließen Sie die Bestellung wie gewohnt ab. Der Link kostet Sie nichts."
+    },
+    {
+      "title": "Fahrzeug übernehmen",
+      "text": "Nach der Auslieferung werden Ihrem Tesla-Konto {reward} kostenloses Laden an Superchargern gutgeschrieben."
+    }
+  ],
+
+  "terms_eyebrow": "Bedingungen",
+  "terms_title": "Die Bedingungen im Überblick",
+  "terms_intro": "Eine kurze Zusammenfassung. Verbindlich sind die Bedingungen des Tesla-Empfehlungsprogramms, die bei der Bestellung angezeigt werden.",
+  "terms": [
+    { "term": "Ihre Prämie", "detail": "{reward} kostenloses Laden an Superchargern" },
+    { "term": "Wer sie erhält", "detail": "Wer einen neuen Tesla über diesen Empfehlungslink bestellt." },
+    { "term": "Wann sie gutgeschrieben wird", "detail": "Nach der Auslieferung, auf Ihrem Tesla-Konto." },
+    { "term": "Prämie des Link-Inhabers", "detail": "Die gleiche: ebenfalls {reward} kostenloses Laden an Superchargern." },
+    { "term": "Kosten", "detail": "Die Nutzung des Links ist kostenlos und erhöht den Fahrzeugpreis nicht." },
+    { "term": "Maßgebliche Regeln", "detail": "Die am Bestelltag gültigen Bedingungen des Tesla-Empfehlungsprogramms." }
+  ],
+
+  "faq_eyebrow": "Fragen",
+  "faq_title": "Häufige Fragen",
+  "faq_intro": "Antworten auf das, was vor einer Bestellung am häufigsten gefragt wird.",
+  "faq_items": [
+    {
+      "question": "Was genau erhalte ich?",
+      "answer": "{reward} kostenloses Laden an Superchargern, gutgeschrieben auf Ihrem Tesla-Konto nach der Auslieferung."
+    },
+    {
+      "question": "Muss ich für die Prämie noch etwas tun?",
+      "answer": "Nein. Bestellen Sie einfach über diesen Link. Die Empfehlung wird Ihrer Bestellung automatisch zugeordnet."
+    },
+    {
+      "question": "Was erhält der Inhaber des Links?",
+      "answer": "Der Inhaber des Links erhält dieselbe Prämie wie Sie: {reward} kostenloses Laden an Superchargern. Die Prämie ist für beide Seiten gleich – diese Seite verschweigt das nicht."
+    },
+    {
+      "question": "Kostet die Nutzung des Links etwas?",
+      "answer": "Nein. Die Nutzung des Links kostet Sie nichts und erhöht den Fahrzeugpreis nicht."
+    },
+    {
+      "question": "Kann ich den Link auch nach der Bestellung verwenden?",
+      "answer": "Verwenden Sie den Link, bevor Sie die Bestellung absenden. Ob eine Empfehlung nachträglich zugeordnet werden kann, entscheidet allein Tesla."
+    },
+    {
+      "question": "Wer betreibt diese Seite?",
+      "answer": "Eine Privatperson, der dieser Empfehlungslink gehört. Die Seite wird weder von Tesla, Inc. betrieben noch gesponsert oder empfohlen."
+    }
+  ],
+
+  "final_eyebrow": "Letzter Schritt",
+  "final_title": "Die Prämie gilt nur für Bestellungen über diesen Link",
+  "final_text": "Öffnen Sie den Link, bevor Sie Ihr Fahrzeug konfigurieren. {reward} kostenloses Laden an Superchargern werden nach der Auslieferung gutgeschrieben.",
+
+  "footer_updated_label": "Zuletzt aktualisiert",
+  "updated_human": "17. Oktober 2026",
+  "footer_disclaimer": "Eine private Seite des Inhabers dieses Empfehlungslinks. Sie wird weder von Tesla, Inc. betrieben noch gesponsert oder empfohlen. Tesla und Supercharger sind Marken der Tesla, Inc. Das Empfehlungsprogramm kann sich ändern; maßgeblich sind die am Bestelltag auf der Tesla-Website angegebenen Bedingungen.",
+  "footer_lang_label": "Sprachversionen",
+  "photos_label": "Fotos"
+}

@@ -1,33 +1,201 @@
-(function(){
-  // theme toggle
-  document.querySelectorAll('.theme-btn').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var cur=document.documentElement.dataset.theme==='dark'?'light':'dark';
-      document.documentElement.dataset.theme=cur;
-      try{localStorage.setItem('tr-theme',cur)}catch(e){}
+/* Referral landing page · site.js
+   Progressive enhancement only. Without this file the page still works:
+   links, FAQ, language selector and the readonly referral field are native.
+   Here: theme toggle and persistence, copy to clipboard, language menu
+   closing, sticky header hairline, scroll reveal. */
+(() => {
+  "use strict";
+
+  const root = document.documentElement;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* ---------------------------------------------------------------- theme */
+  const THEME_KEY = "theme";
+  const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+  const themeMetas = Array.from(document.querySelectorAll('meta[name="theme-color"]'));
+  themeMetas.forEach((meta) => { meta.dataset.systemColor = meta.content; });
+
+  const storedTheme = () => {
+    try {
+      const value = window.localStorage.getItem(THEME_KEY);
+      return value === "light" || value === "dark" ? value : null;
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const syncThemeUi = () => {
+    const theme = root.getAttribute("data-theme");
+    if (themeToggle) themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+    // An explicit choice overrides the system-based browser chrome colour.
+    const chosen = storedTheme();
+    const color = chosen ? getComputedStyle(root).getPropertyValue("--color-bg").trim() : null;
+    themeMetas.forEach((meta) => { meta.content = color || meta.dataset.systemColor; });
+  };
+
+  const applyTheme = (theme, animate) => {
+    const commit = () => {
+      root.setAttribute("data-theme", theme);
+      syncThemeUi();
+    };
+    if (!animate || reduceMotion.matches) {
+      commit();
+    } else if (typeof document.startViewTransition === "function") {
+      document.startViewTransition(commit);
+    } else {
+      root.classList.add("theme-transition");
+      commit();
+      window.setTimeout(() => root.classList.remove("theme-transition"), 400);
+    }
+  };
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      try {
+        window.localStorage.setItem(THEME_KEY, next);
+      } catch (error) {
+        /* storage blocked: the choice lasts for this page view only */
+      }
+      applyTheme(next, true);
+    });
+  }
+
+  systemDark.addEventListener("change", (event) => {
+    if (!storedTheme()) applyTheme(event.matches ? "dark" : "light", true);
+  });
+
+  syncThemeUi();
+
+  /* ------------------------------------------------------- copy to clipboard */
+  const resetTimers = new WeakMap();
+
+  const legacyCopy = (input) => {
+    // Selecting the field and running the copy command fires the input's
+    // "copy" listener below, which swaps in the full URL.
+    input.focus({ preventScroll: true });
+    input.select();
+    input.setSelectionRange(0, input.value.length);
+    let copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } catch (error) {
+      copied = false;
+    }
+    return copied;
+  };
+
+  document.querySelectorAll("[data-copy]").forEach((block) => {
+    const input = block.querySelector("input[data-copy-value]");
+    const button = block.querySelector("[data-copy-button]");
+    const status = block.querySelector("[data-copy-status]");
+    if (!input || !button || !status) return;
+
+    const fullUrl = input.dataset.copyValue;
+    const shortUrl = input.value;
+
+    input.addEventListener("copy", (event) => {
+      if (!event.clipboardData) return;
+      event.clipboardData.setData("text/plain", fullUrl);
+      event.preventDefault();
+    });
+    input.addEventListener("focus", () => input.select());
+    input.addEventListener("blur", () => {
+      if (!block.classList.contains("is-manual")) input.value = shortUrl;
+    });
+
+    const showResult = (copied) => {
+      window.clearTimeout(resetTimers.get(block));
+      block.classList.remove("is-copied", "is-manual");
+      status.textContent = "";
+      if (copied) {
+        block.classList.add("is-copied");
+        status.textContent = status.dataset.copied;
+        input.value = shortUrl;
+        resetTimers.set(block, window.setTimeout(() => {
+          block.classList.remove("is-copied");
+          status.textContent = "";
+        }, 2600));
+      } else {
+        // Last resort: show and select the full URL so the user can copy it.
+        block.classList.add("is-manual");
+        input.value = fullUrl;
+        input.focus({ preventScroll: true });
+        input.select();
+        status.textContent = status.dataset.manual;
+      }
+    };
+
+    button.addEventListener("click", async () => {
+      let copied = false;
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(fullUrl);
+          copied = true;
+        } catch (error) {
+          copied = false;
+        }
+      }
+      if (!copied) copied = legacyCopy(input);
+      if (copied) input.blur();
+      showResult(copied);
     });
   });
-  // nav background on scroll
-  var nav=document.querySelector('nav');
-  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>40)}
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  // copy link
-  document.querySelectorAll('.copy-btn').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var code=btn.closest('.copy-block').querySelector('code').textContent.trim();
-      var done=function(){
-        var label=btn.querySelector('span');
-        btn.classList.add('done');
-        btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg><span>'+btn.dataset.done+'</span>';
-        setTimeout(function(){btn.classList.remove('done');btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>'+btn.dataset.label+'</span>'},2200);
-      };
-      if(navigator.clipboard&&navigator.clipboard.writeText){
-        navigator.clipboard.writeText(code).then(done).catch(function(){fallback()});
-      }else{fallback()}
-      function fallback(){
-        var ta=document.createElement('textarea');ta.value=code;document.body.appendChild(ta);ta.select();
-        try{document.execCommand('copy')}catch(e){}document.body.removeChild(ta);done();
+
+  /* --------------------------------------------------------- language menu */
+  document.querySelectorAll("[data-lang-menu]").forEach((menu) => {
+    const summary = menu.querySelector("summary");
+    menu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.open) {
+        menu.open = false;
+        summary.focus();
       }
     });
+    menu.addEventListener("focusout", (event) => {
+      if (menu.open && event.relatedTarget && !menu.contains(event.relatedTarget)) menu.open = false;
+    });
+    document.addEventListener("click", (event) => {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
   });
+
+  /* ------------------------------------------------- header hairline on scroll */
+  const header = document.querySelector("[data-header]");
+  if (header && "IntersectionObserver" in window) {
+    const sentinel = document.createElement("div");
+    sentinel.className = "header-sentinel";
+    sentinel.setAttribute("aria-hidden", "true");
+    document.body.prepend(sentinel);
+    new IntersectionObserver(([entry]) => {
+      header.classList.toggle("is-stuck", !entry.isIntersecting);
+    }).observe(sentinel);
+  }
+
+  /* ----------------------------------------------------------- scroll reveal */
+  const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
+  if (revealItems.length && "IntersectionObserver" in window && !reduceMotion.matches) {
+    // Measure once, then write: only content below the first screen is hidden.
+    const fold = window.innerHeight;
+    const pending = revealItems.filter((item) => item.getBoundingClientRect().top > fold);
+    pending.forEach((item) => item.classList.add("is-pending"));
+
+    const reveal = (item, delay) => {
+      item.style.setProperty("--reveal-delay", `${delay}ms`);
+      item.classList.remove("is-pending");
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      let order = 0;
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        reveal(entry.target, Math.min(order, 4) * 70);
+        order += 1;
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+
+    pending.forEach((item) => observer.observe(item));
+    window.addEventListener("beforeprint", () => pending.forEach((item) => reveal(item, 0)));
+  }
 })();

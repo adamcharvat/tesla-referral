@@ -1,0 +1,97 @@
+{
+  "reward": "1000 km",
+  "title": "{reward} ingyenes töltés a Supercharger-hálózaton – személyes ajánlás",
+  "meta_description": "Rendelje meg új Tesláját ezen az ajánlói linken keresztül, és az átvétel után {reward} ingyenes Supercharger-töltést kap. Menete, feltételek és gyakori kérdések.",
+  "skip_link": "Ugrás a tartalomra",
+  "brand_label": "Személyes ajánlás",
+  "nav_label": "Fő navigáció",
+  "nav_how": "Hogyan működik",
+  "nav_terms": "Feltételek",
+  "nav_faq": "Kérdések",
+  "nav_cta": "Megrendelés",
+  "lang_button_label": "Nyelv módosítása, jelenleg magyar",
+  "theme_label": "Sötét mód",
+
+  "hero_eyebrow": "Jutalom egy új Tesla megrendelésekor",
+  "h1": "{reward} ingyenes töltés a Supercharger-hálózaton",
+  "hero_lead": "Rendelje meg új Tesláját ezen a linken keresztül. A kilométerek az autó átvétele után jelennek meg a Tesla-fiókjában.",
+  "cta_text": "Megrendelés ajánlással",
+  "hero_note": "A link a Tesla hivatalos weboldalára vezet.",
+
+  "copy_label": "Vagy másolja ki a linket későbbre",
+  "copy_input_label": "Ajánlói link",
+  "copy_button": "Másolás",
+  "copy_done": "Másolva",
+  "copy_status": "A link a vágólapra került.",
+  "copy_manual": "A link ki van jelölve – másolja ki a Ctrl+C vagy ⌘C billentyűkkel.",
+
+  "how_eyebrow": "Menete",
+  "how_title": "Hogyan működik",
+  "how_intro": "A jutalom csak az ezen a linken keresztül leadott rendelésre jár. Minden más változatlan.",
+  "steps": [
+    {
+      "title": "Nyissa meg a linket",
+      "text": "A link a Tesla weboldalára vezet, és az ajánlás automatikusan a rendeléséhez kapcsolódik."
+    },
+    {
+      "title": "Konfigurálja és rendelje meg",
+      "text": "Válassza ki a modellt és a felszereltséget, majd a szokásos módon adja le a rendelést. A link használata semmibe sem kerül."
+    },
+    {
+      "title": "Vegye át az autót",
+      "text": "Az átvétel után {reward} ingyenes Supercharger-töltés kerül a Tesla-fiókjába."
+    }
+  ],
+
+  "terms_eyebrow": "Feltételek",
+  "terms_title": "A feltételek röviden",
+  "terms_intro": "Rövid összefoglaló. A Tesla ajánlói programjának a rendeléskor megjelenített feltételei az irányadók.",
+  "terms": [
+    { "term": "Az Ön jutalma", "detail": "{reward} ingyenes töltés a Supercharger-hálózaton" },
+    { "term": "Ki kapja", "detail": "Aki ezen az ajánlói linken keresztül rendel új Teslát." },
+    { "term": "Mikor írják jóvá", "detail": "Az autó átvétele után, a Tesla-fiókjában." },
+    { "term": "A link tulajdonosának jutalma", "detail": "Ugyanaz: ő is {reward} ingyenes Supercharger-töltést kap." },
+    { "term": "Költség", "detail": "A link használata ingyenes, és nem növeli az autó árát." },
+    { "term": "Irányadó szabályok", "detail": "A Tesla ajánlói programjának a rendelés napján érvényes feltételei." }
+  ],
+
+  "faq_eyebrow": "Kérdések",
+  "faq_title": "Gyakori kérdések",
+  "faq_intro": "Válaszok arra, amit a rendelés előtt a legtöbben megkérdeznek.",
+  "faq_items": [
+    {
+      "question": "Pontosan mit kapok?",
+      "answer": "{reward} ingyenes Supercharger-töltést, amely az autó átvétele után jelenik meg a Tesla-fiókjában."
+    },
+    {
+      "question": "Kell még valamit tennem a jutalomért?",
+      "answer": "Nem. Elég ezen a linken keresztül rendelni. Az ajánlás automatikusan a rendeléséhez kapcsolódik."
+    },
+    {
+      "question": "Mit kap a link tulajdonosa?",
+      "answer": "A link tulajdonosa ugyanazt a jutalmat kapja, mint Ön: {reward} ingyenes Supercharger-töltést. A jutalom mindkét félnek ugyanaz, és ezt ez az oldal nem titkolja."
+    },
+    {
+      "question": "Kerül valamibe a link használata?",
+      "answer": "Nem. A link használata semmibe sem kerül, és nem növeli az autó árát."
+    },
+    {
+      "question": "Használhatom a linket a rendelés leadása után is?",
+      "answer": "A linket a rendelés elküldése előtt használja. Arról, hogy egy ajánlás utólag hozzárendelhető-e, kizárólag a Tesla dönt."
+    },
+    {
+      "question": "Ki üzemelteti ezt az oldalt?",
+      "answer": "Egy magánszemély, akihez ez az ajánlói link tartozik. Az oldalt nem a Tesla, Inc. üzemelteti, nem támogatja és nem hagyta jóvá."
+    }
+  ],
+
+  "final_eyebrow": "Utolsó lépés",
+  "final_title": "A jutalom csak az ezen a linken keresztül leadott rendelésre jár",
+  "final_text": "Nyissa meg a linket, mielőtt konfigurálja az autót. Az átvétel után {reward} ingyenes Supercharger-töltést kap.",
+
+  "footer_updated_label": "Utoljára frissítve",
+  "updated_human": "2026. október 17.",
+  "footer_disclaimer": "Az ajánlói link tulajdonosának magánoldala. Nem a Tesla, Inc. üzemelteti, nem támogatja és nem hagyta jóvá. A Tesla és a Supercharger a Tesla, Inc. védjegyei. Az ajánlói program változhat; a Tesla weboldalán a rendelés napján feltüntetett feltételek az irányadók.",
+  "footer_lang_label": "Nyelvi változatok",
+  "photos_label": "Fotók"
+}
