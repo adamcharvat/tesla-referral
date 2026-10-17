@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://adamcharvat.github.io/tesla-referral/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://adamcharvat.github.io/tesla-referral/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://adamcharvat.github.io/tesla-referral/sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://adamcharvat.github.io/tesla-referral/de/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://adamcharvat.github.io/tesla-referral/hu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+  </url>
+  <url>
+    <loc>https://adamcharvat.github.io/tesla-referral/sk/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://adamcharvat.github.io/tesla-referral/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://adamcharvat.github.io/tesla-referral/sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://adamcharvat.github.io/tesla-referral/de/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://adamcharvat.github.io/tesla-referral/hu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+  </url>
+  <url>
+    <loc>https://adamcharvat.github.io/tesla-referral/en/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://adamcharvat.github.io/tesla-referral/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://adamcharvat.github.io/tesla-referral/sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://adamcharvat.github.io/tesla-referral/de/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://adamcharvat.github.io/tesla-referral/hu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+  </url>
+  <url>
+    <loc>https://adamcharvat.github.io/tesla-referral/de/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://adamcharvat.github.io/tesla-referral/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://adamcharvat.github.io/tesla-referral/sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://adamcharvat.github.io/tesla-referral/de/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://adamcharvat.github.io/tesla-referral/hu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+  </url>
+  <url>
+    <loc>https://adamcharvat.github.io/tesla-referral/hu/</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://adamcharvat.github.io/tesla-referral/"/>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://adamcharvat.github.io/tesla-referral/sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://adamcharvat.github.io/tesla-referral/de/"/>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://adamcharvat.github.io/tesla-referral/hu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adamcharvat.github.io/tesla-referral/en/"/>
+  </url>
+</urlset>
